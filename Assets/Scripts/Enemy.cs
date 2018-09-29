@@ -12,8 +12,8 @@ public class Enemy : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        Fire();
-        StartCoroutine(toSide());
+        //Fire();
+        //StartCoroutine(toSide());
     }
 
     int side = 0;

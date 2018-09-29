@@ -6,17 +6,37 @@ public class Enemy : MonoBehaviour {
 
     public float life = 1;
     public Rigidbody projectile;
-    public float speedForward = 1;
+    public float speedForward = 10;
     public float speedSide = 1;
+    bool inForwardMovement = true;
 
     // Use this for initialization
     void Start () {
         Fire();
+        StartCoroutine(toSide());
     }
-	
-	// Update is called once per frame
-	void Update () {
-        transform.Translate(Vector3.forward * speedForward * Time.deltaTime);
+
+    int side = 0;
+    IEnumerator toSide()
+    {
+        yield return new WaitForSeconds(1);
+        inForwardMovement = !inForwardMovement;
+        side = Random.Range(1, 5) % 2;
+        StartCoroutine(toSide());
+    }
+
+
+    // Update is called once per frame
+    void Update () {
+        if (inForwardMovement)
+            transform.Translate(Vector3.forward * speedForward * Time.deltaTime);
+        else if ( side == 0)
+        {
+            transform.Translate(Vector3.left * speedForward * Time.deltaTime);
+        }
+        else {
+            transform.Translate(Vector3.right * speedForward * Time.deltaTime);
+        }
     }
 
     void Fire() {

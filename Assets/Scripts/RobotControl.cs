@@ -48,8 +48,8 @@ public class RobotControl : MonoBehaviour
 
     public void ReturnToStart()
     {
-        //transform.position = StartPoint.transform.position;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        transform.position = StartPoint.transform.position;
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     public void TakeDamage(float damage)
@@ -57,7 +57,8 @@ public class RobotControl : MonoBehaviour
         life -= damage;
         if (life <= 0) {
             life = maxLife;
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            transform.position = StartPoint.transform.position;
+            //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
         uiLife.value = life / maxLife;
     }

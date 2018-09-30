@@ -63,6 +63,7 @@
   <ItemGroup>
     <Compile Include="Assets\Audios\scripts\SoundController.cs" />
     <Compile Include="Assets\Audios\scripts\SoundRandom.cs" />
+    <Compile Include="Assets\PlayControl.cs" />
     <Compile Include="Assets\PowerUp\script\DestroyDronePowerUp.cs" />
     <Compile Include="Assets\PowerUp\script\HealthPowerUp.cs" />
     <Compile Include="Assets\PowerUp\script\SpawnerB.cs" />

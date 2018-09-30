@@ -15,9 +15,11 @@ public class RobotControl : MonoBehaviour
     public float constantDamage = 3;
     public float constantDamageTime = 1;
     public GameObject Boom;
+    SpawnerB sb;
 
     void Start()
     {
+        sb = GameObject.Find("PowerUpControll").GetComponent<SpawnerB>();
         sc = GameObject.Find("SoundController").GetComponent<SoundController>();
         StartCoroutine(ConstantDamage());
     }
@@ -26,22 +28,37 @@ public class RobotControl : MonoBehaviour
     {
         if (Input.GetKeyDown("w"))
         {
+            Vector3 botposition = transform.position;
             transform.Translate(0, Velocidade * Time.deltaTime, 0);
+            if (transform.position.y > sb.startPoint.position.y) 
+                transform.position = botposition;
             sc.playFootStep();
         }
         if (Input.GetKeyDown("s"))
         {
+            //transform.Translate(0, - Velocidade * Time.deltaTime, 0);
+            Vector3 botposition = transform.position;
             transform.Translate(0, - Velocidade * Time.deltaTime, 0);
+            if (transform.position.y < sb.endPoint.position.y)
+                transform.position = botposition;
             sc.playFootStep();
         }
         if (Input.GetKeyDown("a"))
         {
+            //transform.Translate(-Velocidade * Time.deltaTime, 0, 0);
+            Vector3 botposition = transform.position;
             transform.Translate(-Velocidade * Time.deltaTime, 0, 0);
+            if (transform.position.x < sb.startPoint.position.x)
+                transform.position = botposition;
             sc.playFootStep();
         }
         if (Input.GetKeyDown("d"))
         {
+            //transform.Translate(Velocidade * Time.deltaTime, 0, 0);
+            Vector3 botposition = transform.position;
             transform.Translate(Velocidade * Time.deltaTime, 0, 0);
+            if (transform.position.x > sb.endPoint.position.x)
+                transform.position = botposition;
             sc.playFootStep();
         }
     }

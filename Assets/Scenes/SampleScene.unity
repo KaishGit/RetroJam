@@ -2684,19 +2684,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4905442213594888, guid: 2380d48aea74e4eea9c1f7411ce5f7ae, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -10.69
+      value: -11.74
       objectReference: {fileID: 0}
     - target: {fileID: 4905442213594888, guid: 2380d48aea74e4eea9c1f7411ce5f7ae, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 8.56
+      value: 9.19
       objectReference: {fileID: 0}
     - target: {fileID: 4823666647469172, guid: 2380d48aea74e4eea9c1f7411ce5f7ae, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0.4
+      value: -0.22
       objectReference: {fileID: 0}
     - target: {fileID: 4823666647469172, guid: 2380d48aea74e4eea9c1f7411ce5f7ae, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 2.5
+      value: 3.45
       objectReference: {fileID: 0}
     - target: {fileID: 1171949237791648, guid: 2380d48aea74e4eea9c1f7411ce5f7ae, type: 2}
       propertyPath: m_IsActive
@@ -11208,7 +11208,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.82745105, g: 0.82745105, b: 0.82745105, a: 1}
+  m_Color: {r: 0.20784315, g: 0.20784315, b: 0.20784315, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:

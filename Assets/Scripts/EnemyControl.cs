@@ -78,6 +78,10 @@ public class EnemyControl : MonoBehaviour
 
     private void OnMouseDown()
     {
+        onMouseDown();
+    }
+
+    public void onMouseDown() {
         Destroy(gameObject);
         Instantiate(Boom, transform.position, Quaternion.identity);
     }

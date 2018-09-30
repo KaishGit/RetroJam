@@ -39,7 +39,7 @@ GameObject:
   - component: {fileID: 61894842603839346}
   m_Layer: 0
   m_Name: Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -115,6 +115,7 @@ MonoBehaviour:
   Shot: {fileID: 1235323455510532, guid: d334585ff9b99b745b71e16c18d1edc2, type: 2}
   Robot: {fileID: 0}
   RobotPos: {fileID: 0}
+  Boom: {fileID: 0}
 --- !u!212 &212144004845134968
 SpriteRenderer:
   m_ObjectHideFlags: 1

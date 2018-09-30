@@ -10,7 +10,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace>
     </RootNamespace>
-    <ProjectGuid>{4470CCF9-C4AB-E92B-D5B7-26BD9E1F188D}</ProjectGuid>
+    <ProjectGuid>{E2D9F897-24E9-BD59-A006-1C7097065539}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -63,6 +63,7 @@
   <ItemGroup>
     <Compile Include="Assets\Audios\scripts\SoundController.cs" />
     <Compile Include="Assets\Audios\scripts\SoundRandom.cs" />
+    <Compile Include="Assets\PowerUp\script\DestroyDronePowerUp.cs" />
     <Compile Include="Assets\PowerUp\script\HealthPowerUp.cs" />
     <Compile Include="Assets\PowerUp\script\SpawnerB.cs" />
     <Compile Include="Assets\Scripts\BoomControle.cs" />
@@ -74,16 +75,16 @@
     <Compile Include="Assets\Scripts\RobotControl.cs" />
     <Compile Include="Assets\Scripts\ShotControl.cs" />
     <Reference Include="UnityEditor.StandardEvents">
-      <HintPath>C:/Users/ddkcl/Desktop/RetroGamejam/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
+      <HintPath>C:/Users/ddkcl/Desktop/RetroJam/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>C:/Users/ddkcl/Desktop/RetroGamejam/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>C:/Users/ddkcl/Desktop/RetroJam/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>C:/Users/ddkcl/Desktop/RetroGamejam/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+      <HintPath>C:/Users/ddkcl/Desktop/RetroJam/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>C:/Users/ddkcl/Desktop/RetroGamejam/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>C:/Users/ddkcl/Desktop/RetroJam/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2018.2.10f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>

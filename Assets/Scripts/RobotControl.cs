@@ -14,7 +14,7 @@ public class RobotControl : MonoBehaviour
     public Slider uiLife;
     public float constantDamage = 3;
     public float constantDamageTime = 1;
-
+    public GameObject Boom;
 
     void Start()
     {
@@ -46,19 +46,22 @@ public class RobotControl : MonoBehaviour
         }
     }
 
-    public void ReturnToStart()
-    {
-        transform.position = StartPoint.transform.position;
-        //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-    }
+    //public void ReturnToStart()
+    //{
+    //    //transform.position = StartPoint.transform.position;
+    //    //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    //    SceneManager.LoadScene(0);
+    //}
 
     public void TakeDamage(float damage)
     {
         life -= damage;
         if (life <= 0) {
             life = maxLife;
-            transform.position = StartPoint.transform.position;
-            //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            //transform.position = StartPoint.transform.position;
+            Instantiate(Boom, transform.position, Quaternion.identity);
+            gameObject.GetComponent<Renderer>().enabled = false;
+            StartCoroutine(RestartTime());
         }
         uiLife.value = life / maxLife;
     }
@@ -68,6 +71,12 @@ public class RobotControl : MonoBehaviour
         yield return new WaitForSeconds(constantDamageTime);
         TakeDamage(constantDamage);
         StartCoroutine(ConstantDamage());
+    }
+
+    IEnumerator RestartTime()
+    {
+        yield return new WaitForSeconds(2);
+        SceneManager.LoadScene(0);
     }
 
     public void UpLife(float upLife) {

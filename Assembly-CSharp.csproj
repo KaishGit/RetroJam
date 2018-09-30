@@ -65,6 +65,7 @@
     <Compile Include="Assets\Audios\scripts\SoundRandom.cs" />
     <Compile Include="Assets\PowerUp\script\HealthPowerUp.cs" />
     <Compile Include="Assets\PowerUp\script\SpawnerB.cs" />
+    <Compile Include="Assets\Scripts\BoomControle.cs" />
     <Compile Include="Assets\Scripts\BoxControl.cs" />
     <Compile Include="Assets\Scripts\DroneControl.cs" />
     <Compile Include="Assets\Scripts\EnemyControl.cs" />

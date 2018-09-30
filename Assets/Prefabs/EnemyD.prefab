@@ -115,6 +115,7 @@ MonoBehaviour:
   Shot: {fileID: 1235323455510532, guid: d334585ff9b99b745b71e16c18d1edc2, type: 2}
   Robot: {fileID: 0}
   RobotPos: {fileID: 0}
+  Boom: {fileID: 1709155439917984, guid: 222db7fd8fcf8c64ab6b997513d8f7bb, type: 2}
 --- !u!212 &212030860079100940
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -149,7 +150,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 3d716646f08dc654093f170dfc83add4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

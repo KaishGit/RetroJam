@@ -11,6 +11,7 @@ public class ShotControl : MonoBehaviour
     void Start()
     {
         Robot = GameObject.Find("Robot").transform;
+
         MomentPosition = new Vector3(Robot.position.x, Robot.position.y);
     }
 

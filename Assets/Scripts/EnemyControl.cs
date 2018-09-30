@@ -17,6 +17,7 @@ public class EnemyControl : MonoBehaviour
     public GameObject Shot;
     public GameObject Robot;
     public Transform RobotPos;
+    public GameObject Boom;
 
     SoundController sc;
 
@@ -78,6 +79,7 @@ public class EnemyControl : MonoBehaviour
     private void OnMouseDown()
     {
         Destroy(gameObject);
+        Instantiate(Boom, transform.position, Quaternion.identity);
     }
 
 }

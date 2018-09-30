@@ -6,6 +6,7 @@ public class BoxControl : MonoBehaviour
 {
     public float Velocidade = 5;
     public bool moveToRight;
+    public float damage = 50;
 
     void Start()
     {
@@ -27,7 +28,8 @@ public class BoxControl : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Destroy(collision.gameObject);
+        collision.GetComponent<RobotControl>().TakeDamage(damage);
+        collision.GetComponent<RobotControl>().TakeDamage(damage);
     }
 
     void OnBecameInvisible()

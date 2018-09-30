@@ -6,7 +6,8 @@ using UnityEngine;
 public class GeneratorControl : MonoBehaviour
 {
     public float Intervalo;
-    public GameObject BoxA;
+    //public GameObject BoxA;
+    public List<GameObject> ListBox;
    
     private DateTime _nextSpawn;
 
@@ -19,8 +20,8 @@ public class GeneratorControl : MonoBehaviour
     {
         if(DateTime.Now > _nextSpawn)
         {
-            Instantiate(BoxA, transform.position, Quaternion.identity);
-            _nextSpawn = DateTime.Now.AddSeconds(Intervalo);
+            Instantiate(ListBox[UnityEngine.Random.Range(0, ListBox.Count)], transform.position, Quaternion.identity);
+            _nextSpawn = DateTime.Now.AddSeconds(Intervalo + (UnityEngine.Random.Range(0,1f)));
         }
     }
 }

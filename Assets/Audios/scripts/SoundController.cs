@@ -8,12 +8,21 @@ public class SoundController : MonoBehaviour {
 
     public SoundRandom footSongs;
     public SoundRandom shotSongs;
+    public SoundRandom explosaoSongs;
+
 
     public void playShot()
     {
         shotSongs.play();
 
     }
+
+    public void playExplosao()
+    {
+        explosaoSongs.play();
+
+    }
+
 
     public void playFootStep()
     {

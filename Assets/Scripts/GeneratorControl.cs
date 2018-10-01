@@ -6,7 +6,6 @@ using UnityEngine;
 public class GeneratorControl : MonoBehaviour
 {
     public float Intervalo;
-    //public GameObject BoxA;
     public bool moveToTopDown;
     public List<GameObject> ListBox;
    
@@ -19,17 +18,13 @@ public class GeneratorControl : MonoBehaviour
 
     void Update()
     {
-        if(DateTime.Now > _nextSpawn)
+        if (!UiManager.Instance.Pause)
         {
-            Vector3 tmp = transform.position; ;
-
-            if (moveToTopDown)
-                tmp.y += UnityEngine.Random.Range(-10F, 10F);
-            else 
-                tmp.x += UnityEngine.Random.Range(-5F, 5F);
-
-            Instantiate(ListBox[UnityEngine.Random.Range(0, ListBox.Count)], tmp, Quaternion.identity);
-            _nextSpawn = DateTime.Now.AddSeconds(Intervalo + (UnityEngine.Random.Range(0,1f)));
-        }
+            if (DateTime.Now > _nextSpawn)
+            {
+                Instantiate(ListBox[UnityEngine.Random.Range(0, ListBox.Count)], transform.position, Quaternion.identity);
+                _nextSpawn = DateTime.Now.AddSeconds(Intervalo + (UnityEngine.Random.Range(1f, 2f)));
+            }
+        }      
     }
 }

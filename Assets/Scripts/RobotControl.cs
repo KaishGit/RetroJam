@@ -88,10 +88,10 @@ public class RobotControl : MonoBehaviour
         life -= damage;
         if (life <= 0) {
             life = maxLife;
-            //transform.position = StartPoint.transform.position;
             Instantiate(Boom, transform.position, Quaternion.identity);
             gameObject.GetComponent<Renderer>().enabled = false;
             StartCoroutine(RestartTime());
+            sc.playExplosao();
         }
         uiLife.value = life / maxLife;
     }
@@ -107,6 +107,7 @@ public class RobotControl : MonoBehaviour
     {
         yield return new WaitForSeconds(2);
         SceneManager.LoadScene(0);
+        // UiManager.Instance.ShowScore();
     }
 
     public void UpLife(float upLife) {
